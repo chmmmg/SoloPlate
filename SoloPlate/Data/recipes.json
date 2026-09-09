@@ -1,0 +1,92 @@
+[
+  {
+    "id": "5B111D63-66C0-4F29-8DA4-6004CDCAAA01",
+    "title": "Corn and Egg Bowl",
+    "preparationMinutes": 12,
+    "servingCount": 1,
+    "ingredients": [
+      { "foodName": "Corn", "quantity": 1, "unit": "item" },
+      { "foodName": "Egg", "quantity": 2, "unit": "item" }
+    ],
+    "steps": ["Cut the corn from the cob.", "Cook the corn in a pan for 5 minutes.", "Add two beaten eggs and stir until cooked."]
+  },
+  {
+    "id": "5B111D63-66C0-4F29-8DA4-6004CDCAAA02",
+    "title": "Sweet Potato Egg Bowl",
+    "preparationMinutes": 15,
+    "servingCount": 1,
+    "ingredients": [
+      { "foodName": "Sweet Potato", "quantity": 1, "unit": "item" },
+      { "foodName": "Egg", "quantity": 1, "unit": "item" }
+    ],
+    "steps": ["Cut the sweet potato into small pieces.", "Microwave it with a spoon of water until soft.", "Cook one egg and serve it on top."]
+  },
+  {
+    "id": "5B111D63-66C0-4F29-8DA4-6004CDCAAA03",
+    "title": "Potato and Capsicum Hash",
+    "preparationMinutes": 15,
+    "servingCount": 1,
+    "ingredients": [
+      { "foodName": "Potato", "quantity": 200, "unit": "gram" },
+      { "foodName": "Capsicum", "quantity": 0.5, "unit": "item" }
+    ],
+    "steps": ["Cut the cooked potato and capsicum into small pieces.", "Cook them in a pan until warm and lightly brown.", "Season and serve."]
+  },
+  {
+    "id": "5B111D63-66C0-4F29-8DA4-6004CDCAAA04",
+    "title": "Spinach Omelette",
+    "preparationMinutes": 12,
+    "servingCount": 1,
+    "ingredients": [
+      { "foodName": "Egg", "quantity": 2, "unit": "item" },
+      { "foodName": "Spinach", "quantity": 1, "unit": "bag" }
+    ],
+    "steps": ["Cook the spinach in a pan until soft.", "Pour in two beaten eggs.", "Fold the omelette when the egg is cooked."]
+  },
+  {
+    "id": "5B111D63-66C0-4F29-8DA4-6004CDCAAA05",
+    "title": "Avocado Egg Toast",
+    "preparationMinutes": 10,
+    "servingCount": 1,
+    "ingredients": [
+      { "foodName": "Avocado", "quantity": 0.5, "unit": "item" },
+      { "foodName": "Egg", "quantity": 1, "unit": "item" },
+      { "foodName": "Bread", "quantity": 2, "unit": "item" }
+    ],
+    "steps": ["Toast two slices of bread.", "Mash half an avocado onto the toast.", "Add one cooked egg on top."]
+  },
+  {
+    "id": "5B111D63-66C0-4F29-8DA4-6004CDCAAA06",
+    "title": "Quick Corn Potato Bowl",
+    "preparationMinutes": 14,
+    "servingCount": 1,
+    "ingredients": [
+      { "foodName": "Corn", "quantity": 1, "unit": "item" },
+      { "foodName": "Potato", "quantity": 150, "unit": "gram" }
+    ],
+    "steps": ["Cut the cooked potato into pieces.", "Warm the potato and corn in a pan.", "Mix together and season."]
+  },
+  {
+    "id": "5B111D63-66C0-4F29-8DA4-6004CDCAAA07",
+    "title": "Tomato and Egg Bowl",
+    "preparationMinutes": 15,
+    "servingCount": 1,
+    "ingredients": [
+      { "foodName": "Tomato", "quantity": 1, "unit": "item" },
+      { "foodName": "Egg", "quantity": 2, "unit": "item" }
+    ],
+    "steps": ["Cut the tomato into small pieces.", "Cook the tomato for 3 minutes.", "Add two beaten eggs and stir until cooked."]
+  },
+  {
+    "id": "5B111D63-66C0-4F29-8DA4-6004CDCAAA08",
+    "title": "Avocado Potato Plate",
+    "preparationMinutes": 8,
+    "servingCount": 1,
+    "ingredients": [
+      { "foodName": "Avocado", "quantity": 0.5, "unit": "item" },
+      { "foodName": "Potato", "quantity": 200, "unit": "gram" }
+    ],
+    "steps": ["Slice the cooked potato.", "Add sliced avocado.", "Season lightly and serve."]
+  }
+]
+
