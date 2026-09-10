@@ -1,5 +1,6 @@
 import Foundation
 
+/// Problems the user may meet when asking for tonight's meal.
 enum RecommendTonightMealsError: LocalizedError, Equatable {
     case noUsableFridgeFood
     case noMatchingSingleServeRecipe
@@ -26,6 +27,7 @@ struct RecommendTonightMealsUseCase {
         }
 
         let suggestions = recipeRepository.fetchRecipes().compactMap { recipe -> MealSuggestion? in
+            // The MVP only gives quick recipes for one person.
             guard recipe.servingCount == 1, recipe.preparationMinutes <= 15 else {
                 return nil
             }
@@ -50,6 +52,7 @@ struct RecommendTonightMealsUseCase {
             )
         }
         .sorted {
+            // Earlier food date comes first, then the faster recipe comes first.
             if $0.earliestUseByDate == $1.earliestUseByDate {
                 return $0.recipe.preparationMinutes < $1.recipe.preparationMinutes
             }
@@ -62,4 +65,3 @@ struct RecommendTonightMealsUseCase {
         return suggestions
     }
 }
-

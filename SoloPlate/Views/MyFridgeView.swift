@@ -1,5 +1,6 @@
 import SwiftUI
 
+// This is the first page where user checks what food is recorded.
 struct MyFridgeView: View {
     @ObservedObject var viewModel: SoloPlateViewModel
     @State private var showingAddFood = false
@@ -23,6 +24,7 @@ struct MyFridgeView: View {
                                 HStack {
                                     Text(item.name)
                                         .font(.headline)
+                                    // Only the earliest dated food gets this label.
                                     if item.id == viewModel.useFirstItemID {
                                         Text("USE FIRST")
                                             .font(.caption2.bold())
@@ -66,4 +68,3 @@ struct MyFridgeView: View {
         }
     }
 }
-

@@ -1,6 +1,7 @@
 import XCTest
 @testable import SoloPlate
 
+// Check that preparing a meal updates all quantities safely.
 final class RecordPreparedMealUseCaseTests: XCTestCase {
     private let today = Date(timeIntervalSince1970: 1_800_000_000)
 
@@ -41,6 +42,7 @@ final class RecordPreparedMealUseCaseTests: XCTestCase {
     }
 
     func test_recordPreparedMeal_keepsInventoryUnchanged_whenAnyUpdateFails() {
+        // Corn should not reduce when Egg checking fails later.
         let original = [item("Corn", 2), item("Egg", 1)]
         let repository = InMemoryFridgeRepository(items: original)
         let meal = recipe(ingredients: [ingredient("Corn", 1), ingredient("Egg", 2)])

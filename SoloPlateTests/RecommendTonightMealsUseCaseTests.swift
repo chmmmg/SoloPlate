@@ -1,6 +1,7 @@
 import XCTest
 @testable import SoloPlate
 
+// Check recipe matching, 15-minute boundary and no-result situations.
 final class RecommendTonightMealsUseCaseTests: XCTestCase {
     private let today = Date(timeIntervalSince1970: 1_800_000_000)
 
@@ -84,4 +85,3 @@ final class RecommendTonightMealsUseCaseTests: XCTestCase {
         )
     }
 }
-

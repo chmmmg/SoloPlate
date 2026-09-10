@@ -1,5 +1,6 @@
 import SwiftUI
 
+// A simple form for adding one food record into My Fridge.
 struct RegisterFridgeItemView: View {
     @ObservedObject var viewModel: SoloPlateViewModel
     @Environment(\.dismiss) private var dismiss
@@ -38,6 +39,7 @@ struct RegisterFridgeItemView: View {
             }
             ToolbarItem(placement: .confirmationAction) {
                 Button("Save") {
+                    // Close the sheet only when the Use Case accepts the details.
                     if viewModel.addFood(name: foodName, quantityText: quantity, unit: unit, useByDate: useByDate) {
                         dismiss()
                     } else {
@@ -53,4 +55,3 @@ struct RegisterFridgeItemView: View {
         }
     }
 }
-

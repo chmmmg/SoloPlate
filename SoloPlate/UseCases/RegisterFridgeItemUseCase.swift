@@ -1,5 +1,6 @@
 import Foundation
 
+/// Problems that can stop a new food record from being saved.
 enum RegisterFridgeItemError: LocalizedError, Equatable {
     case missingFoodName
     case nonPositiveQuantity
@@ -24,6 +25,7 @@ struct RegisterFridgeItemUseCase {
 
     @discardableResult
     func execute(name: String, quantity: Double, unit: FoodQuantityUnit, useByDate: Date, today: Date = Date()) throws -> FridgeItem {
+        // Clean spaces first, so a space-only name is not accepted.
         let cleanName = name.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !cleanName.isEmpty else {
             throw RegisterFridgeItemError.missingFoodName
@@ -40,4 +42,3 @@ struct RegisterFridgeItemUseCase {
         return item
     }
 }
-

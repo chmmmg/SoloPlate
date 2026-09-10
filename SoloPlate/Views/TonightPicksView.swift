@@ -1,5 +1,6 @@
 import SwiftUI
 
+// Show the quick meals which match the current fridge quantities.
 struct TonightPicksView: View {
     @ObservedObject var viewModel: SoloPlateViewModel
 
@@ -39,8 +40,8 @@ struct TonightPicksView: View {
         }
         .navigationTitle("Tonight's Picks")
         .onAppear {
+            // Refresh suggestions because the fridge may be changed before coming here.
             viewModel.findMeals()
         }
     }
 }
-

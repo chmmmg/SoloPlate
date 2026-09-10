@@ -1,5 +1,6 @@
 import Foundation
 
+/// Problems that stop SoloPlate from reducing the recorded food quantities.
 enum RecordPreparedMealError: LocalizedError, Equatable {
     case fridgeFoodNotFound(foodName: String)
     case insufficientRecordedQuantity(foodName: String)
@@ -20,6 +21,7 @@ struct RecordPreparedMealUseCase {
 
     func execute(recipe: SingleServeRecipe) throws {
         let originalItems = fridgeRepository.fetchItems()
+        // Work on a copy first, so failed checking will not change the real list.
         var updatedItems = originalItems
 
         for ingredient in recipe.ingredients {
@@ -35,8 +37,8 @@ struct RecordPreparedMealUseCase {
             updatedItems[index].quantity -= ingredient.quantity
         }
 
+        // Remove food when its recorded quantity becomes exactly zero.
         updatedItems.removeAll { $0.quantity == 0 }
         fridgeRepository.replaceItems(updatedItems)
     }
 }
-

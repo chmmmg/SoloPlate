@@ -1,5 +1,6 @@
 import Foundation
 
+// Connect the SwiftUI pages with the three business Use Cases.
 final class SoloPlateViewModel: ObservableObject {
     @Published private(set) var fridgeItems: [FridgeItem] = []
     @Published private(set) var suggestions: [MealSuggestion] = []
@@ -15,6 +16,7 @@ final class SoloPlateViewModel: ObservableObject {
     }
 
     static func live() -> SoloPlateViewModel {
+        // Sample food makes the main flow easy to demonstrate in class.
         let calendar = Calendar.current
         let today = calendar.startOfDay(for: Date())
         let sampleItems = [
@@ -37,6 +39,7 @@ final class SoloPlateViewModel: ObservableObject {
     }
 
     func addFood(name: String, quantityText: String, unit: FoodQuantityUnit, useByDate: Date) -> Bool {
+        // TextField gives a String, so change it to a number before the Use Case.
         guard let quantity = Double(quantityText) else {
             message = "Enter the quantity as a number."
             return false
@@ -85,4 +88,3 @@ final class SoloPlateViewModel: ObservableObject {
         fridgeItems = fridgeRepository.fetchItems()
     }
 }
-

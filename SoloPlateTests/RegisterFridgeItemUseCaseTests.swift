@@ -1,6 +1,7 @@
 import XCTest
 @testable import SoloPlate
 
+// Check the normal input and the main mistakes when user adds food.
 final class RegisterFridgeItemUseCaseTests: XCTestCase {
     private let calendar = Calendar(identifier: .gregorian)
     private let today = Date(timeIntervalSince1970: 1_800_000_000)
@@ -44,4 +45,3 @@ final class RegisterFridgeItemUseCaseTests: XCTestCase {
         }
     }
 }
-

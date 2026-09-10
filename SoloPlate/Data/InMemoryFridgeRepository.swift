@@ -1,5 +1,6 @@
 import Foundation
 
+// Keep fridge records in memory because this is only the MVP version.
 final class InMemoryFridgeRepository: FridgeRepository {
     private var storedItems: [FridgeItem]
 
@@ -19,4 +20,3 @@ final class InMemoryFridgeRepository: FridgeRepository {
         storedItems = items
     }
 }
-

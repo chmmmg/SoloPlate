@@ -1,5 +1,6 @@
 import SwiftUI
 
+// Show one recipe and let user confirm after the meal is really prepared.
 struct MealRecipeDetailView: View {
     @ObservedObject var viewModel: SoloPlateViewModel
     let suggestion: MealSuggestion
@@ -54,6 +55,7 @@ struct MealRecipeDetailView: View {
         .navigationBarTitleDisplayMode(.inline)
         .confirmationDialog("Have you prepared this meal?", isPresented: $showingConfirmation) {
             Button("Yes, Update My Fridge") {
+                // Inventory changes only after this human confirmation.
                 _ = viewModel.recordPrepared(recipe: suggestion.recipe)
                 showingResult = true
             }
@@ -66,4 +68,3 @@ struct MealRecipeDetailView: View {
         }
     }
 }
-
